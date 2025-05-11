@@ -12,10 +12,10 @@ const User = mongoose.model('User', userSchema);
 // Conexión a la base de datos
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb+srv://balentinliranzo32:LXp0zaUfxsrZfd1n@cluster0.mxzemjp.mongodb.net/nombreBaseDatos?retryWrites=true&w=majority"', {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    });
+   await mongoose.connect('mongodb+srv://balentinliranzo32:LXp0zaUfxsrZfd1n@cluster0.mxzemjp.mongodb.net/usuariosdb?retryWrites=true&w=majority', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
     console.log('✅ Conectado a MongoDB Atlas');
   } catch (error) {
     console.error('❌ Error de conexión:', error);
